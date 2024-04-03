@@ -1,17 +1,28 @@
 {
-    "name": "react-portfolio",
+    "name": "reach-connect-app",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "tailwindcss": "^3.4.1",
+        "autoprefixer": "^10.4.8",
+        "bootstrap": "^5.3.3",
+        "browser-sync": "^3.0.2",
+        "cssnano": "^5.1.13",
+        "gulp": "^4.0.2",
+        "gulp-postcss": "^9.0.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "postcss": "^8.4.16",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-helmet-async": "^1.0.7",
+        "react-icons": "^4.1.0",
         "react-router-dom": "^6.6.2",
         "react-scripts": "^5.0.1",
-        "react-icons": "^4.1.0",
         "react-transition-group": "^4.4.2",
-        "web-vitals": "^3.1.1"
+        "sass": "^1.54.5",
+        "web-vitals": "^3.1.1",
+        "webpack": "^5.74.0",
+        "webpack-stream": "^7.0.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -19,7 +30,8 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "yarn build && cp build/index.html build/404.html",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
+        "watch": "gulp watch"
     },
     "eslintConfig": {
         "extends": [

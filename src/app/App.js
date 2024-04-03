@@ -5,9 +5,8 @@ import {
 } from "react-router-dom";
 import withRouter from "../hooks/withRouter";
 import AppRoutes from "./routes";
-import Headermain from "../header";
+import Header from "../header";
 import AnimatedCursor  from "../hooks/AnimatedCursor";
-import "./App.css";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
@@ -32,7 +31,7 @@ export default function App() {
         />
       </div>
       <ScrollToTop>
-        <Headermain />
+        <Header />
         <AppRoutes />
       </ScrollToTop>
     </Router>

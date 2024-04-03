@@ -7,5 +7,5 @@ In today's digital world, staying connected with friends, family, and business a
 - React
 - npm/yarn
 - tailwind
-- (https://www.figma.com/file/ZfASVqSWXYOh0RMwYWnAqI/Untitled?type=design&node-id=0%3A1&mode=dev&t=TexVizt05VKzX5xN-1 "Figma (for designs)")
+- [Figma](https://www.figma.com/file/ZfASVqSWXYOh0RMwYWnAqI/Untitled?type=design&node-id=0%3A1&mode=dev&t=TexVizt05VKzX5xN-1)
 - Prolly some more here too...
