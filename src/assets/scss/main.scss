@@ -27,6 +27,7 @@ $link-decoration: none;
 @import "../../../node_modules/bootstrap/scss/reboot";
 @import "../../../node_modules/bootstrap/scss/type";
 @import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/grid";
 @import "../../../node_modules/bootstrap/scss/forms";
 @import "../../../node_modules/bootstrap/scss/buttons";
 @import "../../../node_modules/bootstrap/scss/alert";
@@ -36,6 +37,9 @@ $link-decoration: none;
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 
 // General
+:root{
+  font-size: 14px;
+}
 html,
 body {
   height: 100%;
@@ -89,18 +93,51 @@ p {
 }
 
 .btn {
-  border-radius: 50px;
-  padding: 4px 19px;
-  color: var(--secondary-color);
+  padding: .5rem 2rem;
+  color: $black;
   position: relative;
-  border: var(--secondary-color) 2px solid;
+  border: $primary 2px solid;
+  background: $primary;
   overflow: hidden;
   transition: all .35s;
   cursor: pointer;
   &:hover{
     filter: brightness(.6);
+    color: $black;
+    background: $primary;
+    border-color: $primary;
+  }
+
+  &.btn-white{
+    color: $white;
+    background-color: transparent;
+    border-color: $white;
+    &:hover{
+      filter: brightness(1);
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+.opener{
+  strong{
+    transition: .35s all;
+    font-weight: 500;
+    opacity: .6;
+    &:hover, &:focus{
+      opacity: 1;
+      color: $primary;
+    }
+  }
+}
+
+footer{
+  a{
+    text-decoration: underline
   }
 }
 
 // INCLUDES
-@import "general/header";
+// @import "general/header";
+@import "general/login";

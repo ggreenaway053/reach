@@ -1,25 +1,18 @@
-import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  useLocation,
-} from "react-router-dom";
-import withRouter from "../hooks/withRouter";
-import AppRoutes from "./routes";
-import Header from "../header";
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home } from "../pages/home";
+import { Login } from "../pages/login";
+
 import AnimatedCursor  from "../hooks/AnimatedCursor";
 
-function _ScrollToTop(props) {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return props.children;
-}
-const ScrollToTop = withRouter(_ScrollToTop);
-
 export default function App() {
+
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [email, setEmail] = useState('')
+  
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+
+    <div className="App">
       <div className="cursor__dot">
         <AnimatedCursor
           innerSize={15}
@@ -30,10 +23,14 @@ export default function App() {
           outerScale={5}
         />
       </div>
-      <ScrollToTop>
-        <Header />
-        <AppRoutes />
-      </ScrollToTop>
-    </Router>
+
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
+          <Route path="*" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+          <Route path="/login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
