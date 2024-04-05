@@ -6,6 +6,9 @@ In today's digital world, staying connected with friends, family, and business a
 ### Tech Stack Used
 - React
 - npm/yarn
-- tailwind
+- bootstrap
 - [Figma](https://www.figma.com/file/ZfASVqSWXYOh0RMwYWnAqI/Untitled?type=design&node-id=0%3A1&mode=dev&t=TexVizt05VKzX5xN-1)
+- express
+- cors
+- bcrypt
 - Prolly some more here too...

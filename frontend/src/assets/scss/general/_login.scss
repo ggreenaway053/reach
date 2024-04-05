@@ -1,0 +1,39 @@
+.login, .register{
+  .intro{
+    img{
+      max-width: 150px;
+    }
+  }
+
+  .form{
+    input{}
+
+    label{
+      color: $black;
+      opacity: .4;
+    }
+
+    .errorLabel{
+      position: absolute;
+      bottom: -35px;
+      color: #f2283a;
+      font-size: .75rem;
+    }
+  }
+}
+
+.register{
+  .form{
+    .errorLabel{
+      bottom: -19px;
+    }
+  }
+}
+
+@media all and (min-width: 1024px){
+  .login, .register{
+    .form{
+      min-height: 64dvh;
+    }
+  }
+}

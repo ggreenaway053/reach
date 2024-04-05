@@ -1,0 +1,18 @@
+// Header
+.site__header {
+  .navbar-brand {
+    img{
+      max-width: 90px;
+    }
+  }
+}
+
+@media all and (min-width: 1024px){
+  .site__header {
+    .navbar-brand {
+      img{
+        max-width: 160px;
+      }
+    }
+  }
+}
